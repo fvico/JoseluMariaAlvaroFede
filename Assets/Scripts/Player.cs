@@ -34,6 +34,11 @@ public class Player : MonoBehaviour
         {
             rigidbodyPlayer.velocity = new Vector2(moveHorizontal * aceleration, rigidbodyPlayer.velocity.y);
             animationsPLayer.SetFloat("speed", moveHorizontal);
+            animationsPLayer.SetBool("isGrounded", true);
+        }
+        else
+        {
+            animationsPLayer.SetBool("isGrounded", false);
         }
         //rigidbodyPlayer.AddForce(new Vector2(moveHorizontal * aceleration, 0f));
 
