@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private Rigidbody2D rigidbodyPlayer;
+    [Range(1,100)] public int aceleration;
+    [Range(1, 100)] public int forceJump;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        rigidbodyPlayer = GetComponent<Rigidbody2D>();
+    }
+    private void FixedUpdate()
+    {
+        Move();
+    }
+    public void Move()
+    {
+        float moveHorizontal;
+        moveHorizontal = Input.GetAxis("Horizontal");
+        rigidbodyPlayer.velocity = new Vector2(moveHorizontal * aceleration, rigidbodyPlayer.velocity.y);
+    }
+    public void Jump()
+    {
+        float jump;
+        jump = Input.GetAxisRaw("Jump");
+        rigidbodyPlayer.AddForce(new Vector2(0f, jump * forceJump));
     }
 }
