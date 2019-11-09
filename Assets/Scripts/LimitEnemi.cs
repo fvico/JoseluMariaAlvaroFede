@@ -4,18 +4,31 @@ using UnityEngine;
 
 public class LimitEnemi : MonoBehaviour
 {
-    public GameObject enemi;
-    private Enemi currentSpeedEnemi;
-    private void Start()
-    {
-        currentSpeedEnemi = enemi.GetComponent<Enemi>();
-    }
+    private Vector2 currentSpeedEnemi;
 
     private void Update()
     {
-        if(currentSpeedEnemi.rigidbodyEnemi.velocity.x < 0)
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if (collision.tag == "Enemi")
         {
-            currentSpeedEnemi.rigidbodyEnemi.velocity = new Vector2(-currentSpeedEnemi.rigidbodyEnemi.velocity.x,0f);
+            currentSpeedEnemi = collision.GetComponent<Enemi>().rigidbodyEnemi.velocity;
+            Debug.Log(currentSpeedEnemi);
+            if (currentSpeedEnemi.x > 0)
+            {
+                collision.GetComponent<Enemi>().rigidbodyEnemi.velocity = new Vector2(-currentSpeedEnemi.x, 0f);
+            }
+            else
+            {
+                collision.GetComponent<Enemi>().rigidbodyEnemi.velocity = new Vector2(+currentSpeedEnemi.x, 0f);
+            }
+
+
         }
     }
+       
 }
