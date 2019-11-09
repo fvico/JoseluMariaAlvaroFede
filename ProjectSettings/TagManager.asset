@@ -4,16 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-<<<<<<< HEAD
-  - DeadPoint
-  - Enemi
-  - LimitEnemi
-=======
-  - Enemi
-  - LimitEnemi
-  - DeadPoint
   - Picker
->>>>>>> 01d8986149ccf0fe063dd7e5e33eaa2016bc40d3
   layers:
   - Default
   - TransparentFX
@@ -23,11 +14,7 @@ TagManager:
   - UI
   - 
   - 
-<<<<<<< HEAD
   - 
-=======
-  - Ground
->>>>>>> 01d8986149ccf0fe063dd7e5e33eaa2016bc40d3
   - 
   - 
   - 
