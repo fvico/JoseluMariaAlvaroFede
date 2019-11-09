@@ -232,7 +232,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &112091089
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -525,31 +525,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1363428411 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 366034256114461941, guid: 742595cb18f29b441a83dad3f5705024,
-    type: 3}
-  m_PrefabInstance: {fileID: 366034254331723884}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1363428412
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1363428411}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c65047baac2542e4c8a4261a7d1061a6, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1500079340
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -908,16 +883,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 366034256114461941, guid: 742595cb18f29b441a83dad3f5705024,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 366034256114461941, guid: 742595cb18f29b441a83dad3f5705024,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
     - target: {fileID: 366034256114461943, guid: 742595cb18f29b441a83dad3f5705024,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -972,16 +937,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 366034256114461938, guid: 742595cb18f29b441a83dad3f5705024,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 366034256114461936, guid: 742595cb18f29b441a83dad3f5705024,
-        type: 3}
-      propertyPath: aceleration
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 742595cb18f29b441a83dad3f5705024, type: 3}
