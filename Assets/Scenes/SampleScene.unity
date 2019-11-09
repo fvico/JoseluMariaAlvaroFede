@@ -728,7 +728,7 @@ PrefabInstance:
     - target: {fileID: 1254711873023479147, guid: 188d540e0439e7a48b118881b488c78f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.9757442
+      value: 5.93
       objectReference: {fileID: 0}
     - target: {fileID: 1254711873023479147, guid: 188d540e0439e7a48b118881b488c78f,
         type: 3}
@@ -794,6 +794,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_GravityScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1417061510198293952, guid: 188d540e0439e7a48b118881b488c78f,
+        type: 3}
+      propertyPath: speedEnemi
+      value: 1.82
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 188d540e0439e7a48b118881b488c78f, type: 3}

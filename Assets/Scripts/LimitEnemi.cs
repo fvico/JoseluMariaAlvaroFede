@@ -20,7 +20,8 @@ public class LimitEnemi : MonoBehaviour
             Debug.Log(currentSpeedEnemi);
             if (currentSpeedEnemi.x > 0)
             {
-                collision.GetComponent<Enemi>().rigidbodyEnemi.velocity = new Vector2(-currentSpeedEnemi.x, 0f);
+                Debug.Log("LLega");
+                collision.GetComponent<Enemi>().rigidbodyEnemi.velocity = new Vector2(-10, 0f);
             }
             else
             {
