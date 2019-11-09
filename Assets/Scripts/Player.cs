@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
+        Jump();
     }
     public void Move()
     {
