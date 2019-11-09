@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
     public void Move()
     {
         float moveHorizontal;
-        moveHorizontal = Input.GetAxis("Horizontal");
+        moveHorizontal = Input.GetAxisRaw("Horizontal");
         //rigidbodyPlayer.velocity = new Vector2(moveHorizontal * aceleration, rigidbodyPlayer.velocity.y);
         rigidbodyPlayer.AddForce(new Vector2(moveHorizontal * aceleration, 0f));
     }
@@ -53,7 +53,12 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Enemi")
+        if (collision.tag == "Enemi" && collision.GetComponent<Enemi>().isActivated)
+        {
+
+            collision.gameObject.SetActive(false);
+        }
+        if(collision.tag == "DeadPoint")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
