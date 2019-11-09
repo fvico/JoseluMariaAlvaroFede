@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Door
+  - Picker
+  - LimitEnemi
+  - Enemi
+  - DeadPoint
   layers:
   - Default
   - TransparentFX
@@ -14,7 +18,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Ground
   - 
   - 
   - 
