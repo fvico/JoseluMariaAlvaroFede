@@ -4,10 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Picker
-  - LimitEnemi
-  - Enemi
-  - DeadPoint
   - Door
   layers:
   - Default
