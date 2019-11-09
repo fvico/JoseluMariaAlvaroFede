@@ -3,12 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Picker
-  - LimitEnemi
-  - Enemi
-  - DeadPoint
-  - Door
+  tags: []
   layers:
   - Default
   - TransparentFX
