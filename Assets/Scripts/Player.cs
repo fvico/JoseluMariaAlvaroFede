@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
     public void Move()
     {
         float moveHorizontal;
-        moveHorizontal = Input.GetAxis("Horizontal");
+        moveHorizontal = Input.GetAxisRaw("Horizontal");
         //rigidbodyPlayer.velocity = new Vector2(moveHorizontal * aceleration, rigidbodyPlayer.velocity.y);
         rigidbodyPlayer.AddForce(new Vector2(moveHorizontal * aceleration, 0f));
     }
