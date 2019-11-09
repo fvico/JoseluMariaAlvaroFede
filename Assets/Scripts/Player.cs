@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         rigidbodyPlayer = GetComponent<Rigidbody2D>();
+        animationsPLayer = GetComponent<Animator>();
     }
     private void FixedUpdate()
     {
@@ -26,8 +27,13 @@ public class Player : MonoBehaviour
     {
         float moveHorizontal;
         moveHorizontal = Input.GetAxisRaw("Horizontal");
-        //rigidbodyPlayer.velocity = new Vector2(moveHorizontal * aceleration, rigidbodyPlayer.velocity.y);
-        rigidbodyPlayer.AddForce(new Vector2(moveHorizontal * aceleration, 0f));
+        if (CheckGroud())
+        {
+            rigidbodyPlayer.velocity = new Vector2(moveHorizontal * aceleration, rigidbodyPlayer.velocity.y);
+            animationsPLayer.SetFloat("speed", moveHorizontal);
+        }
+        //rigidbodyPlayer.AddForce(new Vector2(moveHorizontal * aceleration, 0f));
+
     }
     private bool CheckGroud()
     {
