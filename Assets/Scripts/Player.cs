@@ -33,7 +33,8 @@ public class Player : MonoBehaviour
         if (CheckGroud())
         {
             rigidbodyPlayer.velocity = new Vector2(moveHorizontal * aceleration, rigidbodyPlayer.velocity.y);
-            animationsPLayer.SetFloat("speed", moveHorizontal); 
+            animationsPLayer.SetFloat("speed", moveHorizontal);
+            
         }
         //rigidbodyPlayer.AddForce(new Vector2(moveHorizontal * aceleration, 0f));
 
