@@ -5,6 +5,7 @@ using UnityEngine;
 public class LimitEnemi : MonoBehaviour
 {
     private Vector2 currentSpeedEnemi;
+    
 
     private void Update()
     {
@@ -20,6 +21,7 @@ public class LimitEnemi : MonoBehaviour
             Debug.Log(currentSpeedEnemi);
             if (currentSpeedEnemi.x > 0)
             {
+                Debug.Log("LLega");
                 collision.GetComponent<Enemi>().rigidbodyEnemi.velocity = new Vector2(-currentSpeedEnemi.x, 0f);
             }
             else
