@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     public LayerMask groundMask;
     private bool isGrounded;
     private bool haveAlcohol;
+    private Animator animationsPLayer;
 
     private void Start()
     {
