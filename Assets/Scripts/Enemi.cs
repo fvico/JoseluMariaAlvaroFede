@@ -9,14 +9,24 @@ public class Enemi : MonoBehaviour
     [Range(1, 10)] public float speedEnemi;
     bool positiveDirection = false;
     Vector2 currentSpeed;
+    public bool isActivated;
     private void Start()
     {
+        isActivated = true;
         rigidbodyEnemi = GetComponent<Rigidbody2D>();
     }
     private void FixedUpdate()
     {
         currentSpeed = rigidbodyEnemi.velocity;
-        
+
+        if (isActivated)
+        {
+            MoveEnemi();
+        } 
+    }
+
+    void MoveEnemi()
+    {
         if (positiveDirection)
         {
             rigidbodyEnemi.velocity = new Vector2(speedEnemi, 0f);
@@ -25,9 +35,7 @@ public class Enemi : MonoBehaviour
         {
             rigidbodyEnemi.velocity = new Vector2(-speedEnemi, 0f);
         }
-       
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "LimitEnemi")
