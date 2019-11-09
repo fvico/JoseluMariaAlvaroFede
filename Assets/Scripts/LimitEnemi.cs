@@ -5,6 +5,7 @@ using UnityEngine;
 public class LimitEnemi : MonoBehaviour
 {
     private Vector2 currentSpeedEnemi;
+    
 
     private void Update()
     {
