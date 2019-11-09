@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     public LayerMask groundMask;
     private bool isGrounded;
     private bool haveAlcohol;
+    
 
     private void Start()
     {
@@ -68,5 +69,6 @@ public class Player : MonoBehaviour
             
         }
     }
+    
 
 }
