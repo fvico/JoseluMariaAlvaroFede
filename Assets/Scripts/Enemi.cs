@@ -10,6 +10,7 @@ public class Enemi : MonoBehaviour
     bool positiveDirection = false;
     Vector2 currentSpeed;
     public bool isActivated;
+    [Range(1, 4)] public bool numbEnemi;
     private void Start()
     {
         isActivated = true;

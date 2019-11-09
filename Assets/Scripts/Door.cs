@@ -4,15 +4,7 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject alcohol;
+    public GameObject enemi;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
