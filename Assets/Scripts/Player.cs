@@ -7,9 +7,10 @@ public class Player : MonoBehaviour
 {
     private Rigidbody2D rigidbodyPlayer;
     [Range(1,100)] public int aceleration;
-    [Range(1, 100)] public int forceJump;
+    [Range(1, 200)] public int forceJump;
     public LayerMask groundMask;
     private bool isGrounded;
+    private bool haveAlcohol;
 
     private void Start()
     {
@@ -61,6 +62,10 @@ public class Player : MonoBehaviour
         if(collision.tag == "DeadPoint")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        if (collision.tag == "Picker")
+        {
+            
         }
     }
 
