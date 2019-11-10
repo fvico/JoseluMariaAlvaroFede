@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     private bool isGrounded;
     private bool haveAlcohol;
     private bool m_FacingRight = true;
-    float moveHorizontal = 0f;
+    float moveHorizontal;
     //variable giro pj
     float move;
 
@@ -37,8 +37,9 @@ public class Player : MonoBehaviour
         moveHorizontal = Input.GetAxisRaw("Horizontal");
         if (CheckGroud())
         {
-            
             rigidbodyPlayer.velocity = new Vector2(moveHorizontal * aceleration, rigidbodyPlayer.velocity.y);
+
+            animationsPLayer.SetFloat("speed", moveHorizontal);
             animator.SetFloat("Speed", Mathf.Abs(moveHorizontal));  
             //gira la animacion
             if (moveHorizontal > 0 && !m_FacingRight)
