@@ -8,11 +8,9 @@ public class Enemi : MonoBehaviour
     public Rigidbody2D rigidbodyEnemi;
     [Range(1, 10)] public float speedEnemi;
     bool positiveDirection = false;
-    public bool IsDead = true;
     Vector2 currentSpeed;
     public bool isActivated;
     [Range(1, 4)] public int numbEnemi;
-    public GameObject enemyGameObject;
     private void Start()
     {
         isActivated = true;
@@ -22,11 +20,7 @@ public class Enemi : MonoBehaviour
     private void FixedUpdate()
     {
         currentSpeed = rigidbodyEnemi.velocity;
-        
-        if (isActivated)
-        {
-            MoveEnemi();
-        } 
+        MoveEnemi();
     }
 
     void MoveEnemi()
@@ -42,7 +36,7 @@ public class Enemi : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.tag == "LimitEnemi")
+        if (collider.tag == "LimitEnemi")
         {
             if (currentSpeed.x < 0)
             {
@@ -53,16 +47,5 @@ public class Enemi : MonoBehaviour
                 positiveDirection = false;
             }
         }
-        if (collider.tag == "Player" && GetComponent<Enemi>().isActivated)
-        {
-
-            enemyGameObject.SetActive(false);
-        }
-        if (collider.tag == "DeadPoint")
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
-      
     }
-
 }

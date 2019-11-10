@@ -231,4 +231,4 @@ MonoBehaviour:
   IsDead: 1
   isActivated: 0
   numbEnemi: 1
-  enemyGameObject: {fileID: 5507466623036137199}
+  DeadPoint: {fileID: 5507466623036137199}
