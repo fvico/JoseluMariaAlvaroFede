@@ -119,5 +119,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 018d5723014846f479625526b3ffdba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alcohol: {fileID: 0}
-  enemi: {fileID: 0}
+  alcohol: {fileID: 3623744787661395341, guid: bd069546633c2b942800491ac359602f, type: 3}
+  enemy: {fileID: 7805779452021188623, guid: 188d540e0439e7a48b118881b488c78f, type: 3}

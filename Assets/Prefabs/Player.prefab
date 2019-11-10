@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 366034256114461938}
   - component: {fileID: 366034256114461937}
   - component: {fileID: 366034256114461936}
-  - component: {fileID: 1363428412}
+  - component: {fileID: 2711851490873625298}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -137,7 +137,8 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 256
---- !u!95 &1363428412
+  animator: {fileID: 0}
+--- !u!95 &2711851490873625298
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0

@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         rigidbodyPlayer = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         
     }
     private void FixedUpdate()
