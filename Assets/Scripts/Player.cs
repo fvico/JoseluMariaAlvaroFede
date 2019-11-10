@@ -38,8 +38,6 @@ public class Player : MonoBehaviour
         if (CheckGroud())
         {
             rigidbodyPlayer.velocity = new Vector2(moveHorizontal * aceleration, rigidbodyPlayer.velocity.y);
-
-            
             animator.SetFloat("Speed", Mathf.Abs(moveHorizontal));  
             //gira la animacion
             if (moveHorizontal > 0 && !m_FacingRight)
