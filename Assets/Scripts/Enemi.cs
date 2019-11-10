@@ -11,7 +11,7 @@ public class Enemi : MonoBehaviour
     public bool IsDead = true;
     Vector2 currentSpeed;
     public bool isActivated;
-    [Range(1, 4)] public bool numbEnemi;
+    [Range(1, 4)] public int numbEnemi;
     public GameObject enemyGameObject;
     private void Start()
     {
