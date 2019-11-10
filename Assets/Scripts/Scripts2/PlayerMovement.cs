@@ -30,15 +30,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("IsJumping", true);
             
         }
-        //Sería para hacer que vaya más lento o se acache pero no lo necesitamos si queremos luego lo añadiremos
-        //if (Input.GetButtonDown("Crouch"))
-        //{
-        //    crouch = true;
-        //}
-        //else if (Input.GetButtonUp("Crouch"))
-        //{
-        //    crouch = false;
-        //}
+        
     }
 
     public void OnLanding ()
