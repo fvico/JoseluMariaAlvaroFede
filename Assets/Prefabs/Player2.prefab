@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 201721099}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.184, y: -0.439, z: 0}
+  m_LocalPosition: {x: -0.214, y: -0.356, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5463086045762955479}
@@ -54,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 839230987}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.188, y: 0.019, z: 0}
+  m_LocalPosition: {x: -0.237, y: -0.099, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5463086045762955479}
@@ -69,11 +69,11 @@ BoxCollider2D:
   m_GameObject: {fileID: 5463086045762955477}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 1ddda24f9673b90449c2d8c5acc66f22, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.14609146, y: -0.037459373}
+  m_Offset: {x: -0.14609146, y: -0.022724152}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -84,7 +84,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5356331, y: 0.34861946}
+  m_Size: {x: 0.5356331, y: 0.3780899}
   m_EdgeRadius: 0
 --- !u!114 &1175922814
 MonoBehaviour:
@@ -98,19 +98,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea493d8c55b9734a88a62840a65be1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 400
+  m_JumpForce: 700
   m_CrouchSpeed: 0.4
   m_MovementSmoothing: 0.05
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 823
+    m_Bits: 310
   m_GroundCheck: {fileID: 201721100}
   m_CeilingCheck: {fileID: 839230988}
-  m_CrouchDisableCollider: {fileID: 0}
+  m_CrouchDisableCollider: {fileID: 1175922820}
   OnLandEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1175922819}
+        m_MethodName: OnLanding
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnCrouchEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -127,6 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1175922814}
+  animator: {fileID: 5675852640140902428}
   runSpeed: 40
 --- !u!1001 &5675852638785864736
 PrefabInstance:
@@ -148,12 +160,12 @@ PrefabInstance:
     - target: {fileID: 366034256114461943, guid: 742595cb18f29b441a83dad3f5705024,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.02
+      value: -16.91
       objectReference: {fileID: 0}
     - target: {fileID: 366034256114461943, guid: 742595cb18f29b441a83dad3f5705024,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -16.3
+      value: -16.44
       objectReference: {fileID: 0}
     - target: {fileID: 366034256114461943, guid: 742595cb18f29b441a83dad3f5705024,
         type: 3}
@@ -207,33 +219,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 366034256114461938, guid: 742595cb18f29b441a83dad3f5705024,
         type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 366034256114461938, guid: 742595cb18f29b441a83dad3f5705024,
-        type: 3}
       propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 366034256114461937, guid: 742595cb18f29b441a83dad3f5705024,
         type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 1ddda24f9673b90449c2d8c5acc66f22, type: 2}
+    - target: {fileID: 366034256114461937, guid: 742595cb18f29b441a83dad3f5705024,
+        type: 3}
       propertyPath: m_Offset.x
-      value: -0.14752477
+      value: -0.13780117
       objectReference: {fileID: 0}
     - target: {fileID: 366034256114461937, guid: 742595cb18f29b441a83dad3f5705024,
         type: 3}
       propertyPath: m_Offset.y
-      value: -0.18
+      value: -0.20641217
       objectReference: {fileID: 0}
     - target: {fileID: 366034256114461937, guid: 742595cb18f29b441a83dad3f5705024,
         type: 3}
       propertyPath: m_Radius
-      value: 0.28105074
-      objectReference: {fileID: 0}
-    - target: {fileID: 366034256114461936, guid: 742595cb18f29b441a83dad3f5705024,
-        type: 3}
-      propertyPath: forceJump
-      value: 20
+      value: 0.28909984
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 366034256114461936, guid: 742595cb18f29b441a83dad3f5705024, type: 3}
@@ -247,6 +254,12 @@ GameObject:
 --- !u!4 &5463086045762955479 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 366034256114461943, guid: 742595cb18f29b441a83dad3f5705024,
+    type: 3}
+  m_PrefabInstance: {fileID: 5675852638785864736}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &5675852640140902428 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1363428412, guid: 742595cb18f29b441a83dad3f5705024,
     type: 3}
   m_PrefabInstance: {fileID: 5675852638785864736}
   m_PrefabAsset: {fileID: 0}

@@ -78,36 +78,28 @@ public class Player : MonoBehaviour
         {
             jump = Input.GetAxis("Jump");
             rigidbodyPlayer.AddForce(new Vector2(0f, jump * forceJump));
-            animator.SetBool("IsJumping", true);
+            animator.SetBool("IsJumping", true);           
         }
        
     }
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Ground"))
-        {
-            
-            isGrounded = true;
-            animator.SetBool("IsJumping", false);
-        }
-    }
+    
     //public void OnLanding()
     //{
     //    animator.SetBool("IsJumping", false);
     //}
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collision.tag == "Enemi" && collision.GetComponent<Enemi>().isActivated)
+        if (collider.tag == "Enemi" && collider.GetComponent<Enemi>().isActivated)
         {
 
-            collision.gameObject.SetActive(false);
+            collider.gameObject.SetActive(false);
         }
-        if(collision.tag == "DeadPoint")
+        if(collider.tag == "DeadPoint")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
-        if (collision.tag == "Picker")
+        if (collider.tag == "Picker")
         {
             
         }
