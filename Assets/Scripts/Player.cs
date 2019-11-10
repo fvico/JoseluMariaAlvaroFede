@@ -86,22 +86,22 @@ public class Player : MonoBehaviour
     //    animator.SetBool("IsJumping", false);
     //}
 
-    private void OnTriggerEnter2D(Collider2D collider)
-    {
-        if (collider.tag == "Enemi" && collider.GetComponent<Enemi>().isActivated)
-        {
+    //private void OnTriggerEnter2D(Collider2D collider)
+    //{
+    //    if (collider.tag == "Enemi" && collider.GetComponent<Enemi>().isActivated)
+    //    {
 
-            collider.gameObject.SetActive(false);
-        }
-        if(collider.tag == "DeadPoint")
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
-        if (collider.tag == "Picker")
-        {
+    //        collider.gameObject.SetActive(false);
+    //    }
+    //    if(collider.tag == "DeadPoint")
+    //    {
+    //        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    //    }
+    //    if (collider.tag == "Picker")
+    //    {
             
-        }
-    }
+    //    }
+    //}
     private void Flip()
     {
         // Cambia la direccion en la que el player esta mirando
